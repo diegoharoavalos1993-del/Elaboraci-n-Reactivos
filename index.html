@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sistema de Generación de Reactivos — Carrera de Gestión del Transporte (ESPOCH)</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- ==================== ENCABEZADO INSTITUCIONAL ESPOCH ==================== -->
+  <header class="institutional-header">
+    <div class="header-top-bar">
+      <div class="normative-pill">
+        🏛️ ESPOCH — Facultad de Administración de Empresas | Guía de Evaluación de Resultados de Aprendizaje (Res. 164.CP.2025 / Ref. 133.CP.2026)
+      </div>
+      <div class="authors-top">
+        Autores del Programa: <span>Ing. Yolanda Telenchano • Ing. Marco Santillán • Ing. Diego Haro</span>
+      </div>
+    </div>
+
+    <div class="header-main">
+      <div class="header-logo-container">
+        <img
+          src="assets/logo_header.png"
+          alt="ESPOCH - Carrera de Gestión del Transporte - ISO 9001:2015 - ACBSP"
+          class="header-banner-img js-header-logo"
+        />
+      </div>
+
+      <div class="header-title-block">
+        <h1>SISTEMA GENERADOR DE REACTIVOS DE EVALUACIÓN</h1>
+        <div class="subtitle">EVALUACIÓN DE RESULTADOS DE APRENDIZAJE — CARRERA DE GESTIÓN DEL TRANSPORTE</div>
+        <div class="header-authors-badge">
+          👨‍🏫 <strong>Autores:</strong> Ing. Yolanda Telenchano, Ing. Marco Santillán, Ing. Diego Haro
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== FLUJO DE PASOS (STEPPER) ==================== -->
+  <nav class="workflow-stepper" aria-label="Pasos del sistema">
+    <div class="stepper-track">
+      <div class="step-item completed" onclick="document.getElementById('step1Section').scrollIntoView({behavior:'smooth'})">
+        <div class="step-number">1</div>
+        <div class="step-text">
+          <div class="step-title">Subir Sílabo</div>
+          <div class="step-desc">Carga PDF/DOCX y extracción SAI</div>
+        </div>
+      </div>
+      <div class="step-item active" onclick="document.getElementById('step2Section').scrollIntoView({behavior:'smooth'})">
+        <div class="step-number">2</div>
+        <div class="step-text">
+          <div class="step-title">Configurar Opciones</div>
+          <div class="step-desc">Tipos, cantidad y dificultad</div>
+        </div>
+      </div>
+      <div class="step-item active" onclick="document.getElementById('previewSection').scrollIntoView({behavior:'smooth'})">
+        <div class="step-number">3</div>
+        <div class="step-text">
+          <div class="step-title">Vista Previa y Edición</div>
+          <div class="step-desc">Revisión técnica y formato Word</div>
+        </div>
+      </div>
+      <div class="step-item active" onclick="document.getElementById('exportSection').scrollIntoView({behavior:'smooth'})">
+        <div class="step-number">4</div>
+        <div class="step-text">
+          <div class="step-title">Aceptar y Descargar</div>
+          <div class="step-desc">Word (.docx) + Moodle XML (.xml)</div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==================== CONTENIDO PRINCIPAL ==================== -->
+  <main class="main-container">
+
+    <!-- PASO 1: SUBIR SÍLABO Y DATOS INFORMATIVOS -->
+    <section id="step1Section" class="card">
+      <div class="card-header">
+        <div class="card-title-group">
+          <span class="step-badge">PASO 1</span>
+          <h2>Carga del Sílabo de la Asignatura y Datos Informativos</h2>
+        </div>
+        <div id="uploadStatusBadge" style="font-size:0.81rem; font-weight:700; padding:5px 12px; border-radius:999px; background:#eef9f2; color:#16793b;">
+          ✔ Sílabo cargado
+        </div>
+      </div>
+
+      <div class="upload-grid">
+        <!-- Zona de arrastrar y soltar el Sílabo -->
+        <div id="syllabusDropzone" class="dropzone">
+          <input type="file" id="syllabusFileInput" accept=".pdf,.docx,.txt" style="display:none;" />
+          <div class="dropzone-icon">📄</div>
+          <h3>Suba aquí el Sílabo de la Asignatura (PDF o Word)</h3>
+          <p>
+            Arrastre y suelte el archivo del sílabo descargado del sistema SAI-ESPOCH, o haga clic para seleccionarlo desde su computador. El sistema extraerá unidades, temas, resultados de aprendizaje y bibliografía.
+          </p>
+          <div class="dropzone-actions">
+            <button type="button" id="btnSelectFile" class="btn btn-primary">
+              📂 Seleccionar Sílabo (PDF / DOCX)
+            </button>
+            <button type="button" id="btnLoadExample" class="btn btn-outline" title="Cargar el sílabo de ejemplo de Introducción al Transporte y la Logística">
+              🔄 Cargar Sílabo de Ejemplo (Transporte y Logística)
+            </button>
+          </div>
+        </div>
+
+        <!-- Metadatos extraídos del sílabo (editables por el docente) -->
+        <div>
+          <div class="form-grid">
+            <div class="form-group full-width">
+              <label for="metaAsignatura">ASIGNATURA:</label>
+              <input type="text" id="metaAsignatura" class="form-control" placeholder="Ej. INTRODUCCIÓN AL TRANSPORTE Y LA LOGÍSTICA" />
+            </div>
+            <div class="form-group full-width">
+              <label for="metaProfesor">NOMBRE DEL PROFESOR:</label>
+              <input type="text" id="metaProfesor" class="form-control" placeholder="Ej. ING. DIEGO ALEXANDER HARO AVALOS" />
+            </div>
+            <div class="form-group">
+              <label for="metaPao">PERIODO ACADÉMICO (PAO):</label>
+              <input type="text" id="metaPao" class="form-control" placeholder="Ej. TERCERO (2 MARZO - 15 JULIO 2026)" />
+            </div>
+            <div class="form-group">
+              <label for="metaFecha">FECHA DE ENTREGA:</label>
+              <input type="date" id="metaFecha" class="form-control" />
+            </div>
+            <div class="form-group full-width">
+              <label for="metaUnidadCurricular">UNIDAD DE ORGANIZACIÓN CURRICULAR (SEGÚN SÍLABO):</label>
+              <select id="metaUnidadCurricular" class="form-control">
+                <option value="UNIDAD PROFESIONAL">UNIDAD PROFESIONAL (80% evaluación de carrera)</option>
+                <option value="UNIDAD BÁSICA">UNIDAD BÁSICA (20% evaluación de carrera)</option>
+                <option value="UNIDAD DE INTEGRACIÓN CURRICULAR">UNIDAD DE INTEGRACIÓN CURRICULAR</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Unidades, Resultados de Aprendizaje y Bibliografía extraídos del Sílabo -->
+      <div class="syllabus-summary-box">
+        <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
+          <strong style="font-size:0.84rem; color:#0f172a; text-transform:uppercase;">
+            📚 Unidades y Temas Detectados en el Sílabo (Seleccione las unidades a evaluar):
+          </strong>
+          <span style="font-size:0.76rem; color:#64748b;">Marque o desmarque las unidades que desea incluir en los reactivos</span>
+        </div>
+        <div id="syllabusUnitsContainer" class="syllabus-tags-row"></div>
+
+        <details style="margin-top:12px;">
+          <summary style="cursor:pointer; font-size:0.81rem; font-weight:700; color:#005a9c;">
+            🔎 Ver Resultados de Aprendizaje de la Carrera (RAC) y Bibliografía extraídos del Sílabo
+          </summary>
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:10px; background:#fff; padding:12px; border-radius:8px; border:1px solid #e2e8f0;">
+            <div>
+              <div style="font-size:0.76rem; font-weight:800; color:#0f172a; margin-bottom:4px;">RESULTADOS DE APRENDIZAJE DE LA CARRERA (RAC):</div>
+              <div id="syllabusRacContainer"></div>
+            </div>
+            <div>
+              <div style="font-size:0.76rem; font-weight:800; color:#0f172a; margin-bottom:4px;">BIBLIOGRAFÍA BÁSICA Y COMPLEMENTARIA DEL SÍLABO:</div>
+              <div id="syllabusBibContainer"></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <!-- PASO 2: CONFIGURACIÓN DE OPCIONES, TIPOS DE PREGUNTAS, CANTIDAD Y NIVEL DE DIFICULTAD -->
+    <section id="step2Section" class="card">
+      <div class="card-header">
+        <div class="card-title-group">
+          <span class="step-badge">PASO 2</span>
+          <h2>Opciones de Generación: Nivel de Dificultad, Cantidad y Tipo de Reactivos</h2>
+        </div>
+        <div id="totalQuestionsBadge" style="font-size:0.85rem; font-weight:800; padding:6px 14px; border-radius:999px; background:#0f172a; color:#ffffff;">
+          6 Reactivos (2 Bajo, 2 Medio, 2 Alto)
+        </div>
+      </div>
+
+      <div class="config-layout">
+        <!-- Columna Izquierda: Cantidad por Nivel de Dificultad -->
+        <div>
+          <div style="font-size:0.82rem; font-weight:700; color:#334155; margin-bottom:8px;">
+            ⚡ Plantillas Rápidas de Distribución por Dificultad (Guía Académica ESPOCH):
+          </div>
+          <div class="preset-bar">
+            <button type="button" class="preset-btn js-preset-btn active" data-bajo="2" data-medio="2" data-alto="2">
+              Balanceado Ejemplo (6: 2 Bajo, 2 Medio, 2 Alto)
+            </button>
+            <button type="button" class="preset-btn js-preset-btn" data-bajo="1" data-medio="1" data-alto="1">
+              Unidad Básica Art. 9 (3: 1 Bajo, 1 Medio, 1 Alto)
+            </button>
+            <button type="button" class="preset-btn js-preset-btn" data-bajo="1" data-medio="1" data-alto="3">
+              Unidad Profesional Art. 9 (5: 1 Bajo, 1 Medio, 3 Altos)
+            </button>
+            <button type="button" class="preset-btn js-preset-btn" data-bajo="3" data-medio="3" data-alto="4">
+              Banco Asignatura Sec. 5 (10: 3 Bajos, 3 Medios, 4 Altos)
+            </button>
+          </div>
+
+          <div class="difficulty-cards">
+            <!-- Dificultad Baja -->
+            <div class="diff-card bajo">
+              <div>
+                <div class="diff-header">
+                  <span class="diff-badge">Nivel Bajo</span>
+                  <span style="font-size:0.74rem; color:#64748b;">⏱ 1–2 min</span>
+                </div>
+                <div class="diff-tax" style="margin-top:6px;">Taxonomía: Conocimiento</div>
+                <p class="diff-desc" style="margin-top:4px;">
+                  Nivel 1 (Guía ESPOCH): Habilidades memorísticas y reconocimiento de conceptos, principios y terminología.
+                </p>
+              </div>
+              <div class="counter-control">
+                <button type="button" class="counter-btn js-counter-btn" data-target="inputCantBajo" data-delta="-1">−</button>
+                <input type="number" id="inputCantBajo" class="counter-input" value="2" min="0" max="50" />
+                <button type="button" class="counter-btn js-counter-btn" data-target="inputCantBajo" data-delta="1">+</button>
+              </div>
+            </div>
+
+            <!-- Dificultad Media -->
+            <div class="diff-card medio">
+              <div>
+                <div class="diff-header">
+                  <span class="diff-badge">Nivel Medio</span>
+                  <span style="font-size:0.74rem; color:#64748b;">⏱ 2–3 min</span>
+                </div>
+                <div class="diff-tax" style="margin-top:6px;">Taxonomía: Comprensión</div>
+                <p class="diff-desc" style="margin-top:4px;">
+                  Nivel 2 (Guía ESPOCH): Organización del conocimiento específico, interpretación, relación y jerarquización.
+                </p>
+              </div>
+              <div class="counter-control">
+                <button type="button" class="counter-btn js-counter-btn" data-target="inputCantMedio" data-delta="-1">−</button>
+                <input type="number" id="inputCantMedio" class="counter-input" value="2" min="0" max="50" />
+                <button type="button" class="counter-btn js-counter-btn" data-target="inputCantMedio" data-delta="1">+</button>
+              </div>
+            </div>
+
+            <!-- Dificultad Alta -->
+            <div class="diff-card alto">
+              <div>
+                <div class="diff-header">
+                  <span class="diff-badge">Nivel Alto</span>
+                  <span style="font-size:0.74rem; color:#64748b;">⏱ 3–5 min</span>
+                </div>
+                <div class="diff-tax" style="margin-top:6px;">Taxonomía: Aplicación</div>
+                <p class="diff-desc" style="margin-top:4px;">
+                  Nivel 3 (Guía ESPOCH): Indagación, resolución de problemas prácticos, cálculos y análisis crítico de casos.
+                </p>
+              </div>
+              <div class="counter-control">
+                <button type="button" class="counter-btn js-counter-btn" data-target="inputCantAlto" data-delta="-1">−</button>
+                <input type="number" id="inputCantAlto" class="counter-input" value="2" min="0" max="50" />
+                <button type="button" class="counter-btn js-counter-btn" data-target="inputCantAlto" data-delta="1">+</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Configuración opcional de IA Gemini -->
+          <details style="margin-top:14px; background:#f8fafc; padding:10px 14px; border-radius:8px; border:1px solid #e2e8f0;">
+            <summary style="cursor:pointer; font-size:0.8rem; font-weight:700; color:#475569;">
+              🤖 Opcional: Conectar clave de API de Google Gemini (el sistema ya incluye Motor Pedagógico Local sin necesidad de API)
+            </summary>
+            <div style="margin-top:8px; display:flex; gap:10px; align-items:center;">
+              <input
+                type="password"
+                id="geminiApiKeyInput"
+                class="form-control"
+                style="flex:1;"
+                placeholder="Pegue aquí su API Key de Google AI Studio (AIzaSy...) si desea generación en la nube"
+              />
+            </div>
+          </details>
+        </div>
+
+        <!-- Columna Derecha: Tipos de Preguntas según Modelo Word y Guía Académica -->
+        <div>
+          <div style="font-size:0.82rem; font-weight:700; color:#334155; margin-bottom:8px;">
+            📝 Tipos de Preguntas / Reactivos a Incluir (Sección 8 Guía ESPOCH y Modelo Word):
+          </div>
+          <div class="question-types-list">
+            <label class="type-checkbox-card checked">
+              <input type="checkbox" class="js-question-type-cb" value="Selección Múltiple" checked />
+              <div>
+                <div class="type-title">Selección Múltiple (Pregunta directa y Casos de Aplicación)</div>
+                <div class="type-sub">Proposición o problema técnico-práctico con 4 alternativas (a, b, c, d). Recomendado en Sección 8.1 ESPOCH.</div>
+              </div>
+            </label>
+
+            <label class="type-checkbox-card checked">
+              <input type="checkbox" class="js-question-type-cb" value="De complementación, completación, mutiladas" checked />
+              <div>
+                <div class="type-title">De complementación, completación o afirmación incompleta</div>
+                <div class="type-sub">Proposición con concepto clave a completar al final del enunciado (4 opciones a, b, c, d).</div>
+              </div>
+            </label>
+
+            <label class="type-checkbox-card checked">
+              <input type="checkbox" class="js-question-type-cb" value="De asociación o emparejamiento" checked />
+              <div>
+                <div class="type-title">De relación, correspondencia o asociación / emparejamiento</div>
+                <div class="type-sub">Asociación de conceptos, definiciones o instalaciones con selección múltiple (Sección 8.2 Guía ESPOCH).</div>
+              </div>
+            </label>
+
+            <label class="type-checkbox-card checked">
+              <input type="checkbox" class="js-question-type-cb" value="De ordenación" checked />
+              <div>
+                <div class="type-title">De jerarquización, ordenación o numeración</div>
+                <div class="type-sub">Ordenamiento cronológico o metodológico de etapas, procesos o ciclos logísticos (Sección 8.3 Guía ESPOCH).</div>
+              </div>
+            </label>
+
+            <label class="type-checkbox-card">
+              <input type="checkbox" class="js-question-type-cb" value="Verdadero o Falso" />
+              <div>
+                <div class="type-title">Verdadero o Falso</div>
+                <div class="type-sub">Disponible según formato Word (Nota: La Guía ESPOCH 7.e sugiere priorizar 4 opciones para pruebas complexivas).</div>
+              </div>
+            </label>
+          </div>
+
+          <div style="margin-top:16px; display:flex; justify-content:flex-end;">
+            <button type="button" id="btnGeneratePreview" class="btn btn-primary btn-lg" style="width:100%;">
+              ⚡ Generar / Actualizar Vista Previa de Reactivos
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PASO 3: VISTA PREVIA DE LAS PREGUNTAS -->
+    <section id="previewSection" class="card">
+      <div class="card-header">
+        <div class="card-title-group">
+          <span class="step-badge">PASO 3</span>
+          <h2>Vista Previa, Validación Académica y Edición de Reactivos</h2>
+        </div>
+        <div id="previewCountSummary" style="font-size:0.85rem; color:#334155;"></div>
+      </div>
+
+      <!-- Indicadores de Cumplimiento de la Guía Académica ESPOCH (Sección 7) -->
+      <div class="quality-checklist">
+        <span class="quality-pill">✔ Alineado a Temas y Subtemas del Sílabo</span>
+        <span class="quality-pill">✔ Vinculado a Resultados de Aprendizaje (RAC y Unidad)</span>
+        <span class="quality-pill">✔ 4 Alternativas (a, b, c, d) sin "Todas/Ninguna de las anteriores"</span>
+        <span class="quality-pill">✔ Variación equilibrada de letra correcta</span>
+        <span class="quality-pill">✔ Respuesta correcta justificada y bibliografía del sílabo</span>
+      </div>
+
+      <!-- Barra de herramientas de la Vista Previa -->
+      <div class="preview-toolbar">
+        <div class="view-mode-tabs">
+          <button type="button" class="view-tab-btn js-view-tab active" data-mode="word">
+            📄 Vista Formato Word Oficial (Modelo ESPOCH)
+          </button>
+          <button type="button" class="view-tab-btn js-view-tab" data-mode="edit">
+            ✏️ Editar / Personalizar Preguntas
+          </button>
+          <button type="button" class="view-tab-btn js-view-tab" data-mode="xml">
+            💻 Vista Código Moodle XML
+          </button>
+        </div>
+
+        <div style="display:flex; gap:8px; flex-wrap:wrap;">
+          <button type="button" id="btnAddManualQuestion" class="btn btn-outline btn-sm">
+            ➕ Agregar Reactivo Adicional
+          </button>
+        </div>
+      </div>
+
+      <!-- Contenedor Dinámico de la Vista Previa -->
+      <div id="previewContentArea"></div>
+    </section>
+
+    <!-- PASO 4: ACEPTAR Y GENERAR ARCHIVOS (WORD + MOODLE XML) -->
+    <section id="exportSection" class="accept-export-banner">
+      <div>
+        <h3>¿Está conforme con la vista previa de los reactivos?</h3>
+        <p>
+          Al hacer clic en <strong>"Aceptar y Generar Archivos"</strong>, el sistema descargará automáticamente dos archivos con las mismas preguntas:<br />
+          1️⃣ <strong>Documento Word (.docx)</strong> con el formato institucional exacto, logos de la Carrera de Gestión del Transporte y casillas marcadas.<br />
+          2️⃣ <strong>Archivo Moodle XML (.xml)</strong> listo para importar directamente al Banco de Preguntas del Aula Virtual Moodle de la ESPOCH.
+        </p>
+      </div>
+
+      <div class="export-buttons-group">
+        <button type="button" id="btnAcceptAndGenerateBoth" class="btn btn-success btn-lg">
+          ✅ Aceptar y Generar Archivos (Word + Moodle XML)
+        </button>
+        <button type="button" id="btnExportWordOnly" class="btn btn-outline" style="background:rgba(255,255,255,0.1); color:#fff; border-color:rgba(255,255,255,0.3);">
+          📄 Solo Word (.docx)
+        </button>
+        <button type="button" id="btnExportMoodleOnly" class="btn btn-blue">
+          📦 Solo Moodle XML (.xml)
+        </button>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== PIE DE PÁGINA INSTITUCIONAL ==================== -->
+  <footer class="institutional-footer">
+    <div class="footer-inner">
+      <img
+        src="assets/logo_footer.png"
+        alt="Pie de página ESPOCH - Carrera de Gestión del Transporte"
+        class="footer-banner-img js-footer-logo"
+      />
+      <div class="footer-credits">
+        <strong>Escuela Superior Politécnica de Chimborazo (ESPOCH) — Facultad de Administración de Empresas — Carrera de Gestión del Transporte</strong><br />
+        Sistema de Generación de Reactivos para la Evaluación de Resultados de Aprendizaje (Cumplimiento Resolución 164.CP.2025 / Reformas 133.CP.2026, 134.CP.2026 y 337.CP.2026)<br />
+        <strong>Autores del Programa:</strong> Ing. Yolanda Telenchano &nbsp;|&nbsp; Ing. Marco Santillán &nbsp;|&nbsp; Ing. Diego Haro
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast de Notificación -->
+  <div id="toastNotification" class="toast-notification" role="status" aria-live="polite"></div>
+
+  <!-- Librerías Locales (100% funcional sin internet ni servidor) -->
+  <script src="lib/jszip.min.js"></script>
+  <script src="lib/pdf.min.js"></script>
+  <script src="lib/pdf.worker.min.js"></script>
+  <script src="lib/mammoth.browser.min.js"></script>
+
+  <!-- Módulos del Sistema ESPOCH -->
+  <script src="js/template_assets.js"></script>
+  <script src="js/syllabus_parser.js"></script>
+  <script src="js/question_generator.js"></script>
+  <script src="js/exporters.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

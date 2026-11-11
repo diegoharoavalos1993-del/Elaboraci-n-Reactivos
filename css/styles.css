@@ -1,0 +1,996 @@
+/* ==========================================================================
+   SISTEMA INSTITUCIONAL DE GENERACIÓN DE REACTIVOS - ESPOCH
+   Carrera de Gestión del Transporte
+   Autores: Ing. Yolanda Telenchano, Ing. Marco Santillán, Ing. Diego Haro
+   ========================================================================== */
+
+:root {
+  --espoch-red: #c8102e;
+  --espoch-red-dark: #9e0b22;
+  --espoch-red-light: #fdf2f4;
+  --espoch-green: #16793b;
+  --espoch-green-light: #eef9f2;
+  --acbsp-blue: #005a9c;
+  --acbsp-blue-light: #eff6ff;
+  --slate-900: #0f172a;
+  --slate-800: #1e293b;
+  --slate-700: #334155;
+  --slate-600: #475569;
+  --slate-500: #64748b;
+  --slate-300: #cbd5e1;
+  --slate-200: #e2e8f0;
+  --slate-100: #f1f5f9;
+  --slate-50: #f8fafc;
+  --amber-600: #d97706;
+  --amber-100: #fef3c7;
+  --radius-lg: 14px;
+  --radius-md: 10px;
+  --radius-sm: 6px;
+  --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.07);
+  --shadow-md: 0 4px 16px rgba(15, 23, 42, 0.08);
+  --shadow-lg: 0 10px 30px rgba(15, 23, 42, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+  background-color: #f3f6fa;
+  color: var(--slate-800);
+  line-height: 1.5;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ==================== ENCABEZADO INSTITUCIONAL ==================== */
+.institutional-header {
+  background: #ffffff;
+  border-bottom: 4px solid var(--espoch-red);
+  box-shadow: var(--shadow-md);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-top-bar {
+  background: var(--slate-900);
+  color: #ffffff;
+  font-size: 0.78rem;
+  padding: 6px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.header-top-bar .normative-pill {
+  background: rgba(255, 255, 255, 0.12);
+  padding: 2px 10px;
+  border-radius: 999px;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+}
+
+.header-top-bar .authors-top {
+  color: #f8fafc;
+  font-weight: 600;
+}
+
+.header-top-bar .authors-top span {
+  color: #fca5a5;
+}
+
+.header-main {
+  max-width: 1380px;
+  margin: 0 auto;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.header-logo-container {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.header-banner-img {
+  height: 74px;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.header-title-block {
+  text-align: right;
+  flex: 1;
+  min-width: 280px;
+}
+
+.header-title-block h1 {
+  font-size: 1.32rem;
+  font-weight: 800;
+  color: var(--slate-900);
+  letter-spacing: -0.3px;
+  line-height: 1.25;
+}
+
+.header-title-block .subtitle {
+  font-size: 0.86rem;
+  color: var(--espoch-red);
+  font-weight: 700;
+  margin-top: 2px;
+}
+
+.header-authors-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 6px;
+  background: var(--slate-100);
+  border: 1px solid var(--slate-200);
+  border-left: 3px solid var(--espoch-red);
+  padding: 4px 12px;
+  border-radius: var(--radius-sm);
+  font-size: 0.79rem;
+  color: var(--slate-700);
+}
+
+/* ==================== STEPPER / FLUJO DE TRABAJO ==================== */
+.workflow-stepper {
+  max-width: 1380px;
+  margin: 18px auto 0;
+  padding: 0 24px;
+  width: 100%;
+}
+
+.stepper-track {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  background: #ffffff;
+  padding: 12px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--slate-200);
+}
+
+.step-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 1px solid transparent;
+  background: var(--slate-50);
+}
+
+.step-item:hover {
+  background: var(--slate-100);
+}
+
+.step-item.active {
+  background: var(--espoch-red-light);
+  border-color: #f8b4be;
+}
+
+.step-item.completed {
+  background: var(--espoch-green-light);
+  border-color: #bbf7d0;
+}
+
+.step-number {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--slate-300);
+  color: var(--slate-800);
+  font-weight: 700;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.step-item.active .step-number {
+  background: var(--espoch-red);
+  color: #ffffff;
+}
+
+.step-item.completed .step-number {
+  background: var(--espoch-green);
+  color: #ffffff;
+}
+
+.step-text .step-title {
+  font-weight: 700;
+  font-size: 0.88rem;
+  color: var(--slate-900);
+}
+
+.step-text .step-desc {
+  font-size: 0.74rem;
+  color: var(--slate-500);
+}
+
+/* ==================== CONTENEDOR PRINCIPAL ==================== */
+.main-container {
+  max-width: 1380px;
+  width: 100%;
+  margin: 18px auto 32px;
+  padding: 0 24px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--slate-200);
+  padding: 22px 24px;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 14px;
+  margin-bottom: 18px;
+  border-bottom: 1px solid var(--slate-200);
+  flex-wrap: wrap;
+}
+
+.card-title-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.card-title-group .step-badge {
+  background: var(--espoch-red);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.78rem;
+  padding: 3px 9px;
+  border-radius: 6px;
+}
+
+.card-title-group h2 {
+  font-size: 1.12rem;
+  font-weight: 700;
+  color: var(--slate-900);
+}
+
+/* ==================== ZONA DE SUBIDA DE SÍLABO ==================== */
+.upload-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1.4fr;
+  gap: 22px;
+  align-items: stretch;
+}
+
+.dropzone {
+  border: 2px dashed var(--slate-300);
+  background: var(--slate-50);
+  border-radius: var(--radius-lg);
+  padding: 28px 20px;
+  text-align: center;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.dropzone:hover,
+.dropzone.dragover {
+  border-color: var(--espoch-red);
+  background: var(--espoch-red-light);
+}
+
+.dropzone-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.7rem;
+  color: var(--espoch-red);
+}
+
+.dropzone h3 {
+  font-size: 1.02rem;
+  color: var(--slate-900);
+}
+
+.dropzone p {
+  font-size: 0.83rem;
+  color: var(--slate-500);
+  max-width: 360px;
+}
+
+.dropzone-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 6px;
+}
+
+/* ==================== BOTONES ==================== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-weight: 600;
+  font-size: 0.88rem;
+  padding: 9px 16px;
+  border-radius: var(--radius-sm);
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.18s ease;
+  text-decoration: none;
+  font-family: inherit;
+}
+
+.btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.btn-primary {
+  background: var(--espoch-red);
+  color: #ffffff;
+  box-shadow: 0 2px 6px rgba(200, 16, 46, 0.25);
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: var(--espoch-red-dark);
+}
+
+.btn-success {
+  background: var(--espoch-green);
+  color: #ffffff;
+  box-shadow: 0 2px 8px rgba(22, 121, 59, 0.25);
+}
+
+.btn-success:hover:not(:disabled) {
+  background: #11612e;
+}
+
+.btn-blue {
+  background: var(--acbsp-blue);
+  color: #ffffff;
+}
+
+.btn-blue:hover:not(:disabled) {
+  background: #004477;
+}
+
+.btn-outline {
+  background: #ffffff;
+  border-color: var(--slate-300);
+  color: var(--slate-700);
+}
+
+.btn-outline:hover:not(:disabled) {
+  border-color: var(--slate-500);
+  background: var(--slate-50);
+}
+
+.btn-sm {
+  padding: 5px 11px;
+  font-size: 0.79rem;
+}
+
+.btn-lg {
+  padding: 13px 24px;
+  font-size: 0.98rem;
+  border-radius: var(--radius-md);
+}
+
+/* ==================== FORMULARIOS Y METADATOS ==================== */
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.form-group.full-width {
+  grid-column: 1 / -1;
+}
+
+.form-group label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--slate-700);
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.form-control {
+  padding: 8px 11px;
+  border: 1px solid var(--slate-300);
+  border-radius: var(--radius-sm);
+  font-size: 0.88rem;
+  color: var(--slate-900);
+  font-family: inherit;
+  background: #ffffff;
+  transition: border-color 0.15s;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--espoch-red);
+  box-shadow: 0 0 0 3px rgba(200, 16, 46, 0.1);
+}
+
+textarea.form-control {
+  resize: vertical;
+  min-height: 68px;
+}
+
+/* ==================== RESUMEN DE UNIDADES Y RAC DEL SÍLABO ==================== */
+.syllabus-summary-box {
+  margin-top: 16px;
+  background: var(--slate-50);
+  border: 1px solid var(--slate-200);
+  border-radius: var(--radius-md);
+  padding: 14px 16px;
+}
+
+.syllabus-tags-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.unit-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 11px;
+  background: #ffffff;
+  border: 1px solid var(--slate-300);
+  border-radius: var(--radius-sm);
+  font-size: 0.81rem;
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.15s;
+}
+
+.unit-chip input[type="checkbox"] {
+  accent-color: var(--espoch-red);
+  width: 15px;
+  height: 15px;
+}
+
+.unit-chip.selected {
+  border-color: var(--espoch-red);
+  background: var(--espoch-red-light);
+  font-weight: 600;
+}
+
+/* ==================== CONFIGURACIÓN DE DIFICULTAD Y TIPOS ==================== */
+.config-layout {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 22px;
+}
+
+.preset-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.preset-btn {
+  font-size: 0.79rem;
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--slate-300);
+  background: var(--slate-50);
+  color: var(--slate-700);
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.15s;
+}
+
+.preset-btn:hover,
+.preset-btn.active {
+  background: var(--slate-900);
+  color: #ffffff;
+  border-color: var(--slate-900);
+}
+
+.difficulty-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.diff-card {
+  border: 1px solid var(--slate-200);
+  border-radius: var(--radius-md);
+  padding: 14px;
+  background: var(--slate-50);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.diff-card.bajo {
+  border-top: 4px solid var(--espoch-green);
+}
+
+.diff-card.medio {
+  border-top: 4px solid var(--amber-600);
+}
+
+.diff-card.alto {
+  border-top: 4px solid var(--espoch-red);
+}
+
+.diff-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.diff-badge {
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 2px 8px;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+.diff-card.bajo .diff-badge {
+  background: var(--espoch-green-light);
+  color: var(--espoch-green);
+}
+
+.diff-card.medio .diff-badge {
+  background: var(--amber-100);
+  color: var(--amber-600);
+}
+
+.diff-card.alto .diff-badge {
+  background: var(--espoch-red-light);
+  color: var(--espoch-red);
+}
+
+.diff-tax {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--slate-800);
+}
+
+.diff-desc {
+  font-size: 0.74rem;
+  color: var(--slate-500);
+  line-height: 1.35;
+}
+
+.counter-control {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffffff;
+  border: 1px solid var(--slate-300);
+  border-radius: var(--radius-sm);
+  padding: 4px;
+}
+
+.counter-btn {
+  width: 30px;
+  height: 30px;
+  border: none;
+  background: var(--slate-100);
+  color: var(--slate-800);
+  font-weight: 800;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.counter-btn:hover {
+  background: var(--slate-200);
+}
+
+.counter-input {
+  width: 48px;
+  text-align: center;
+  border: none;
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--slate-900);
+}
+
+.counter-input:focus {
+  outline: none;
+}
+
+.question-types-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.type-checkbox-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px 12px;
+  border: 1px solid var(--slate-200);
+  border-radius: var(--radius-sm);
+  background: var(--slate-50);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.type-checkbox-card:hover {
+  background: #ffffff;
+  border-color: var(--slate-300);
+}
+
+.type-checkbox-card.checked {
+  background: var(--acbsp-blue-light);
+  border-color: #93c5fd;
+}
+
+.type-checkbox-card input {
+  margin-top: 3px;
+  accent-color: var(--acbsp-blue);
+  width: 16px;
+  height: 16px;
+}
+
+.type-checkbox-card .type-title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--slate-900);
+}
+
+.type-checkbox-card .type-sub {
+  font-size: 0.74rem;
+  color: var(--slate-500);
+}
+
+/* ==================== VISTA PREVIA DE REACTIVOS ==================== */
+.preview-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  background: var(--slate-100);
+  padding: 12px 16px;
+  border-radius: var(--radius-md);
+  margin-bottom: 18px;
+}
+
+.view-mode-tabs {
+  display: inline-flex;
+  background: #ffffff;
+  padding: 4px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--slate-300);
+}
+
+.view-tab-btn {
+  padding: 6px 14px;
+  border: none;
+  background: transparent;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--slate-600);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.view-tab-btn.active {
+  background: var(--slate-900);
+  color: #ffffff;
+}
+
+.quality-checklist {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.quality-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.76rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: var(--espoch-green-light);
+  color: var(--espoch-green);
+  border: 1px solid #bbf7d0;
+}
+
+/* ==================== TARJETAS INTERACTIVAS DE EDICIÓN ==================== */
+.reactivo-card {
+  border: 1px solid var(--slate-300);
+  border-radius: var(--radius-md);
+  background: #ffffff;
+  margin-bottom: 18px;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.reactivo-card-header {
+  background: var(--slate-900);
+  color: #ffffff;
+  padding: 10px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.reactivo-card-body {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.options-editor-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.option-editor-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 10px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--slate-200);
+  background: var(--slate-50);
+}
+
+.option-editor-row.is-correct {
+  background: var(--espoch-green-light);
+  border-color: #86efac;
+}
+
+.option-letter-badge {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  font-weight: 800;
+  font-size: 0.84rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--slate-200);
+  color: var(--slate-800);
+  flex-shrink: 0;
+}
+
+.option-editor-row.is-correct .option-letter-badge {
+  background: var(--espoch-green);
+  color: #ffffff;
+}
+
+/* ==================== SIMULADOR VISUAL DEL DOCUMENTO WORD OFICIAL ==================== */
+.word-document-preview {
+  background: #e2e8f0;
+  padding: 28px 16px;
+  border-radius: var(--radius-md);
+  overflow-x: auto;
+}
+
+.word-page {
+  background: #ffffff;
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 36px 48px;
+  box-shadow: 0 8px 28px rgba(15, 23, 42, 0.18);
+  font-family: "Cambria", "Times New Roman", serif;
+  color: #000000;
+  border: 1px solid #cbd5e1;
+}
+
+.word-header-banner img {
+  width: 100%;
+  max-height: 92px;
+  object-fit: contain;
+  margin-bottom: 14px;
+}
+
+.word-meta-list {
+  font-size: 0.94rem;
+  line-height: 1.55;
+  margin-bottom: 18px;
+}
+
+.word-meta-list div strong {
+  font-weight: 700;
+}
+
+.word-reactivo-heading {
+  font-weight: 700;
+  font-size: 0.96rem;
+  margin: 18px 0 6px;
+}
+
+.word-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+}
+
+.word-table td {
+  border: 1px solid #000000;
+  padding: 7px 10px;
+  vertical-align: middle;
+}
+
+.word-table td.label-col {
+  width: 32%;
+  font-weight: 700;
+}
+
+.word-table td.value-col {
+  width: 68%;
+  text-align: justify;
+}
+
+.word-footer-banner {
+  margin-top: 28px;
+  padding-top: 12px;
+  border-top: 1px solid #e2e8f0;
+}
+
+.word-footer-banner img {
+  width: 100%;
+  max-height: 75px;
+  object-fit: contain;
+}
+
+/* ==================== BARRA DE ACEPTACIÓN Y EXPORTACIÓN ==================== */
+.accept-export-banner {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  color: #ffffff;
+  border-radius: var(--radius-lg);
+  padding: 22px 26px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 18px;
+  box-shadow: var(--shadow-lg);
+  border-left: 6px solid var(--espoch-red);
+}
+
+.accept-export-banner h3 {
+  font-size: 1.15rem;
+  font-weight: 800;
+  margin-bottom: 4px;
+}
+
+.accept-export-banner p {
+  font-size: 0.86rem;
+  color: var(--slate-300);
+}
+
+.export-buttons-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* ==================== PIE DE PÁGINA INSTITUCIONAL ==================== */
+.institutional-footer {
+  background: #ffffff;
+  border-top: 2px solid var(--slate-200);
+  margin-top: auto;
+  padding: 18px 24px;
+}
+
+.footer-inner {
+  max-width: 1380px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer-banner-img {
+  max-width: 760px;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.footer-credits {
+  text-align: center;
+  font-size: 0.82rem;
+  color: var(--slate-600);
+  border-top: 1px solid var(--slate-200);
+  padding-top: 10px;
+  width: 100%;
+}
+
+.footer-credits strong {
+  color: var(--slate-900);
+}
+
+/* ==================== NOTIFICACIONES / TOAST ==================== */
+.toast-notification {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background: var(--slate-900);
+  color: #ffffff;
+  padding: 14px 20px;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  border-left: 5px solid var(--espoch-green);
+  font-size: 0.88rem;
+  z-index: 9999;
+  transform: translateY(120%);
+  opacity: 0;
+  transition: all 0.25s ease;
+  max-width: 420px;
+}
+
+.toast-notification.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+@media (max-width: 980px) {
+  .upload-grid,
+  .config-layout,
+  .difficulty-cards,
+  .stepper-track {
+    grid-template-columns: 1fr;
+  }
+  .header-title-block {
+    text-align: left;
+  }
+}

@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Banco de Reactivos - Carrera de Gestión del Transporte (ESPOCH) -->
+<!-- Autores del Programa: Ing. Yolanda Telenchano, Ing. Marco Santillán, Ing. Diego Haro -->
+<quiz>
+  <question type="category">
+    <category>
+      <text>$course$/top/Evaluación Resultados de Aprendizaje/INTRODUCCIÓN AL TRANSPORTE Y LA LOGÍSTICA</text>
+    </category>
+    <info format="html">
+      <text><![CDATA[<p>Banco de reactivos de INTRODUCCIÓN AL TRANSPORTE Y LA LOGÍSTICA (PAO TERCERO) - Ing. Diego Alexander Haro Avalos.</p>]]></text>
+    </info>
+    <idnumber></idnumber>
+  </question>
+  <question type="multichoice">
+    <name><text>Reactivo 1 [Bajo - Conocimiento] - Unidad 1: Introducción a la ingeniería del transporte — Tema 1.2:</text></name>
+    <questiontext format="html"><text><![CDATA[<div class="espoch-reactivo"><p><em>Selección Múltiple — Lea detenidamente el enunciado y seleccione la alternativa correcta entre las cuatro opciones disponibles.</em></p><p>Dentro de los fundamentos de la ingeniería del transporte, ¿cuál es el conjunto de componentes físicos y operativos fundamentales que interactúan de manera coordinada para conformar un sistema de transporte?</p></div>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p><strong>Respuesta correcta:</strong> a) La infraestructura vial o fija, los vehículos o unidades móviles, y el sistema de operación, control y gestión normativa.</p><p><strong>Justificación:</strong> De acuerdo con la teoría de sistemas de transporte (Arenal, 2022), todo sistema de transporte está integrado por tres subsistemas esenciales: infraestructura (vías, terminales), vehículos (unidades de carga/pasajeros) y el sistema de operación/gestión que regula su circulación segura y eficiente.</p><p><strong>Resultado de Aprendizaje:</strong> RAC3: Aplicar los conocimientos de las ciencias básicas y del área profesionalizante para solucionar problemas de transporte, movilidad, logística y seguridad vial, mediante propuestas amigables con el medio ambiente. | RA Unidad 1: Define adecuadamente el área de estudio de la Ingeniería de Transporte con capacidad crítica, intelectual y personal.</p><p><strong>Bibliografía:</strong> Arenal, Carmen. (2022). Transporte de larga distancia. Recuperado de: https://elibro.net/es/ereader/espoch/226118</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber>ESPOCH_TR_1_BAJO</idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>    <answer fraction="100" format="html">
+      <text><![CDATA[<p>La infraestructura vial o fija, los vehículos o unidades móviles, y el sistema de operación, control y gestión normativa.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>¡Correcto! De acuerdo con la teoría de sistemas de transporte (Arenal, 2022), todo sistema de transporte está integrado por tres subsistemas esenciales: infraestructura (vías, terminales), vehículos (unidades de carga/pasajeros) y el sistema de operación/gestión que regula su circulación segura y eficiente.</p>]]></text></feedback>
+    </answer>    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Únicamente el parque automotor público, las tarifas de pasaje urbano y las estaciones de peaje interprovincial.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Opción incorrecta.</p>]]></text></feedback>
+    </answer>    <answer fraction="0" format="html">
+      <text><![CDATA[<p>La oferta comercial de las empresas navieras, los aranceles aduaneros y los tratados de libre comercio vigentes.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Opción incorrecta.</p>]]></text></feedback>
+    </answer>    <answer fraction="0" format="html">
+      <text><![CDATA[<p>El diseño geométrico de aceras peatonales, el mantenimiento correctivo de motores y el seguro de accidentes.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Opción incorrecta.</p>]]></text></feedback>
+    </answer>    <tags>
+      <tag><text>Dificultad:Bajo</text></tag>
+      <tag><text>Taxonomia:Conocimiento</text></tag>
+    </tags>
+  </question>
+  <question type="multichoice">
+    <name><text>Reactivo 2 [Bajo - Conocimiento] - Unidad 3: La logística y su importancia — Tema 1.2: Conceptos gen</text></name>
+    <questiontext format="html"><text><![CDATA[<div class="espoch-reactivo"><p><em>De complementación, completación, mutiladas — Seleccione la opción que completa de forma técnica y precisa la afirmación planteada.</em></p><p>En la caracterización de la doctrina logística moderna, la gestión logística se encarga de planificar, implementar y controlar de manera eficiente el flujo directo e inverso y el almacenamiento de bienes, servicios e información relacionada, desde el ___________________ con el propósito de satisfacer los requerimientos del cliente.</p></div>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p><strong>Respuesta correcta:</strong> b) punto de origen de las materias primas hasta el punto de consumo final</p><p><strong>Justificación:</strong> La definición técnica de la logística del transporte (Arenal, 2022) establece que su alcance abarca la gestión integral del flujo físico y de información desde el punto de origen (proveedores) hasta el punto de consumo final (clientes).</p><p><strong>Resultado de Aprendizaje:</strong> RAC2: Integrar equipos de trabajo multidisciplinarios tanto en investigaciones como en la toma de decisiones técnicas y/o económicas con solvencia, responsabilidad, conciencia ambiental y honestidad en el ámbito de transporte. | RA Unidad 3: Conoce con precisión la logística del transporte y sus aplicaciones dentro y fuera del país.</p><p><strong>Bibliografía:</strong> Arenal, Carmen. (2022). Transporte de larga distancia. Recuperado de: https://elibro.net/es/ereader/espoch/226118</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber>ESPOCH_TR_2_BAJO</idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>    <answer fraction="0" format="html">
+      <text><![CDATA[<p>proceso de facturación contable hasta la liquidación de impuestos municipales</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Opción incorrecta.</p>]]></text></feedback>
+    </answer>    <answer fraction="100" format="html">
+      <text><![CDATA[<p>punto de origen de las materias primas hasta el punto de consumo final</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>¡Correcto! La definición técnica de la logística del transporte (Arenal, 2022) establece que su alcance abarca la gestión integral del flujo físico y de información desde el punto de origen (proveedores) hasta el punto de consumo final (clientes).</p>]]></text></feedback>
+    </answer>    <answer fraction="0" format="html">
+      <text><![CDATA[<p>diseño publicitario de la marca hasta la contratación del personal administrativo</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Opción incorrecta.</p>]]></text></feedback>
+    </answer>    <answer fraction="0" format="html">
+      <text><![CDATA[<p>mantenimiento mecánico de la flota hasta la adquisición de repuestos automotrices</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Opción incorrecta.</p>]]></text></feedback>
+    </answer>    <tags>
+      <tag><text>Dificultad:Bajo</text></tag>
+      <tag><text>Taxonomia:Conocimiento</text></tag>
+    </tags>
+  </question>
+  <question type="multichoice">
+    <name><text>Reactivo 3 [Medio - Comprensión] - Unidad 1: Introducción a la ingeniería del transporte — Tema 2.3:</text></name>
+    <questiontext format="html"><text><![CDATA[<div class="espoch-reactivo"><p><em>De asociación o emparejamiento (Relación o correspondencia) — Relacione correctamente cada elemento de la primera columna con su definición o característica correspondiente y seleccione la combinación correcta.</em></p><p>Relacione el tipo de estudio de la Ingeniería del Transporte con su propósito técnico correspondiente:</p><p>(1) Estudio de Origen - Destino (O-D)</p><p>(2) Estudio de Capacidad y Nivel de Servicio</p><p>(3) Estudio de Volumen y Clasificación Vehicular</p><p>(4) Estudio de Velocidad y Tiempo de Viaje</p><p>a) Cuantifica la cantidad y composición del flujo vehicular que pasa por una sección vial en un período determinado.</p><p>b) Determina las líneas de deseo de viajes, motivos de desplazamiento y matrices de flujo entre zonas de transporte.</p><p>c) Evalúa la calidad operativa de una infraestructura vial frente a la demanda (categorías A hasta F) e identifica cuellos de botella.</p><p>d) Mide las demoras operativas, velocidades de recorrido y velocidades de punto para evaluar la eficiencia de una ruta.</p></div>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p><strong>Respuesta correcta:</strong> c) 1b, 2c, 3a, 4d</p><p><strong>Justificación:</strong> En los estudios de ingeniería del transporte (Barros &amp; Pazmay, 2024; Narayanaswami, 2023): (1) Origen-Destino identifica matrices y patrones espaciales de viaje (b); (2) Capacidad y Nivel de Servicio evalúa la suficiencia operativa de la vía de A a F (c); (3) Volumen/Aforo cuantifica y clasifica el flujo vehicular (a); y (4) Velocidad/Tiempo de viaje cuantifica demoras y fluidez en ruta (d).</p><p><strong>Resultado de Aprendizaje:</strong> RAC6: Aplicar el razonamiento lógico, verbal, numérico y abstracto para enfrentar con éxito los retos que se le presenten en su ejercicio profesional. | RA Unidad 1: Define adecuadamente el área de estudio de la Ingeniería de Transporte con capacidad crítica, intelectual y personal.</p><p><strong>Bibliografía:</strong> Barros, Alvaro; Pazmay, Pablo. (2024). Derecho y planificacion del transporte. Recuperado de: https://elibro.net/es/ereader/espoch/283271</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber>ESPOCH_TR_3_MEDIO</idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>    <answer fraction="0" format="html">
+      <text><![CDATA[<p>1a, 2b, 3c, 4d</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Opción incorrecta.</p>]]></text></feedback>
+    </answer>    <answer fraction="0" format="html">
+      <text><![CDATA[<p>1b, 2a, 3d, 4c</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Opción incorrecta.</p>]]></text></feedback>
+    </answer>    <answer fraction="100" format="html">
+      <text><![CDATA[<p>1b, 2c, 3a, 4d</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>¡Correcto! En los estudios de ingeniería del transporte (Barros &amp; Pazmay, 2024; Narayanaswami, 2023): (1) Origen-Destino identifica matrices y patrones espaciales de viaje (b); (2) Capacidad y Nivel de Servicio evalúa la suficiencia operativa de la vía de A a F (c); (3) Volumen/Aforo cuantifica y clasifica el flujo vehicular (a); y (4) Velocidad/Tiempo de viaje cuantifica demoras y fluidez en ruta (d).</p>]]></text></feedback>
+    </answer>    <answer fraction="0" format="html">
+      <text><![CDATA[<p>1c, 2d, 3a, 4b</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Opción incorrecta.</p>]]></text></feedback>
+    </answer>    <tags>
+      <tag><text>Dificultad:Medio</text></tag>
+      <tag><text>Taxonomia:Comprensión</text></tag>
+    </tags>
+  </question>
+  <question type="multichoice">
+    <name><text>Reactivo 4 [Medio - Comprensión] - Unidad 4: Procesos logísticos y la cadena de distribución — Tema </text></name>
+    <questiontext format="html"><text><![CDATA[<div class="espoch-reactivo"><p><em>De ordenación / jerarquización — Ordene secuencial y lógicamente las etapas o procedimientos técnicos indicados y seleccione la opción correcta.</em></p><p>Ordene de manera secuencial y cronológica las fases que integran el ciclo logístico de abastecimiento y distribución de mercancías:</p><p>(1) Recepción, verificación técnica de calidad/cantidad y registro en almacén.</p><p>(2) Determinación de necesidades y cálculo de requerimientos según el índice de consumo.</p><p>(3) Preparación de pedidos (picking/packing), consolidación de carga y planificación de rutas de despacho.</p><p>(4) Selección de proveedores, negociación y emisión de la orden de compra o aprovisionamiento.</p><p>(5) Transporte de distribución física hacia los nodos de consumo y retroalimentación de indicadores de servicio.</p></div>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p><strong>Respuesta correcta:</strong> d) 2, 4, 1, 3, 5</p><p><strong>Justificación:</strong> El ciclo logístico y de abastecimiento (Arenal, 2022) sigue una secuencia lógica: primero se determinan las necesidades según la demanda/consumo (2), luego se gestiona la compra ante proveedores (4), se recepta y verifica la mercancía en almacén (1), se preparan y consolidan los pedidos (3) y finalmente se ejecuta el transporte de distribución con control de entrega (5).</p><p><strong>Resultado de Aprendizaje:</strong> RAC3: Aplicar los conocimientos de las ciencias básicas y del área profesionalizante para solucionar problemas de transporte, movilidad, logística y seguridad vial, mediante propuestas amigables con el medio ambiente. | RA Unidad 4: Conoce adecuadamente los procesos logísticos que se deben realizar para el traslado de diferentes tipos de carga.</p><p><strong>Bibliografía:</strong> Arenal, Carmen. (2022). Transporte de larga distancia. Recuperado de: https://elibro.net/es/ereader/espoch/226118</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber>ESPOCH_TR_4_MEDIO</idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>    <answer fraction="0" format="html">
+      <text><![CDATA[<p>4, 2, 1, 5, 3</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Opción incorrecta.</p>]]></text></feedback>
+    </answer>    <answer fraction="0" format="html">
+      <text><![CDATA[<p>1, 2, 4, 3, 5</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Opción incorrecta.</p>]]></text></feedback>
+    </answer>    <answer fraction="0" format="html">
+      <text><![CDATA[<p>2, 1, 4, 3, 5</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Opción incorrecta.</p>]]></text></feedback>
+    </answer>    <answer fraction="100" format="html">
+      <text><![CDATA[<p>2, 4, 1, 3, 5</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>¡Correcto! El ciclo logístico y de abastecimiento (Arenal, 2022) sigue una secuencia lógica: primero se determinan las necesidades según la demanda/consumo (2), luego se gestiona la compra ante proveedores (4), se recepta y verifica la mercancía en almacén (1), se preparan y consolidan los pedidos (3) y finalmente se ejecuta el transporte de distribución con control de entrega (5).</p>]]></text></feedback>
+    </answer>    <tags>
+      <tag><text>Dificultad:Medio</text></tag>
+      <tag><text>Taxonomia:Comprensión</text></tag>
+    </tags>
+  </question>
+  <question type="multichoice">
+    <name><text>Reactivo 5 [Alto - Aplicación] - Unidad 2: El transporte intermodal — Tema 1.1: Conceptos básicos </text></name>
+    <questiontext format="html"><text><![CDATA[<div class="espoch-reactivo"><p><em>Selección Múltiple — Lea detenidamente el enunciado y seleccione la alternativa correcta entre las cuatro opciones disponibles.</em></p><p>Una empresa agroexportadora ubicada en Riobamba debe movilizar 180 toneladas semanales de brócoli congelado hacia el puerto de Guayaquil para exportación. Dispone de dos alternativas logísticas:</p><p>• Alternativa A (Unimodal carretera): Camiones refrigerados de 15 t de capacidad útil, con un costo operativo de $480 por viaje y emisiones medias de 0,95 t CO₂ por viaje.</p><p>• Alternativa B (Intermodal carretera + nodo ferroviario/portuario consolidado): Uso de contenedores refrigerados de 30 t en convoy consolidado desde un centro logístico regional, con un costo de transferencia de $120 por contenedor y un flete troncal de $660 por contenedor, reduciendo las emisiones totales en un 35% respecto al modo unimodal.</p><p>Desde el criterio técnico-económico y ambiental (RAC2 y RAC3), ¿cuál es el ahorro económico semanal y la cantidad total de emisiones semanales de CO₂ si se implementa la Alternativa B?</p></div>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p><strong>Respuesta correcta:</strong> a) Ahorro económico de $1.080 semanales y emisiones totales de 7,41 t CO₂ por semana.</p><p><strong>Justificación:</strong> Cálculo técnico: Para 180 t semanales: En la Alternativa A se requieren 180 / 15 = 12 viajes; Costo A = 12 × $480 = $5.760; Emisiones A = 12 × 0,95 = 11,40 t CO₂. En la Alternativa B se requieren 180 / 30 = 6 contenedores; Costo unitario B = $120 + $660 = $780 por contenedor; Costo total B = 6 × $780 = $4.680. El ahorro semanal es $5.760 - $4.680 = $1.080. Las emisiones de B (65% de 11,40 t) son 11,40 × 0,65 = 7,41 t CO₂/semana (Arenal, 2022).</p><p><strong>Resultado de Aprendizaje:</strong> RAC2: Integrar equipos de trabajo multidisciplinarios tanto en investigaciones como en la toma de decisiones técnicas y/o económicas con solvencia, responsabilidad, conciencia ambiental y honestidad en el ámbito de transporte. | RA Unidad 2: Identifica con precisión los modos de transporte existentes y los beneficios sociales y económicos que traen consigo.</p><p><strong>Bibliografía:</strong> Arenal, Carmen. (2022). Transporte de larga distancia. Recuperado de: https://elibro.net/es/ereader/espoch/226118</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber>ESPOCH_TR_5_ALTO</idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>    <answer fraction="100" format="html">
+      <text><![CDATA[<p>Ahorro económico de $1.080 semanales y emisiones totales de 7,41 t CO₂ por semana.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>¡Correcto! Cálculo técnico: Para 180 t semanales: En la Alternativa A se requieren 180 / 15 = 12 viajes; Costo A = 12 × $480 = $5.760; Emisiones A = 12 × 0,95 = 11,40 t CO₂. En la Alternativa B se requieren 180 / 30 = 6 contenedores; Costo unitario B = $120 + $660 = $780 por contenedor; Costo total B = 6 × $780 = $4.680. El ahorro semanal es $5.760 - $4.680 = $1.080. Las emisiones de B (65% de 11,40 t) son 11,40 × 0,65 = 7,41 t CO₂/semana (Arenal, 2022).</p>]]></text></feedback>
+    </answer>    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Ahorro económico de $1.800 semanales y emisiones totales de 11,40 t CO₂ por semana.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Opción incorrecta.</p>]]></text></feedback>
+    </answer>    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Ahorro económico de $720 semanales y emisiones totales de 5,70 t CO₂ por semana.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Opción incorrecta.</p>]]></text></feedback>
+    </answer>    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Ahorro económico de $1.080 semanales y emisiones totales de 3,99 t CO₂ por semana.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Opción incorrecta.</p>]]></text></feedback>
+    </answer>    <tags>
+      <tag><text>Dificultad:Alto</text></tag>
+      <tag><text>Taxonomia:Aplicación</text></tag>
+    </tags>
+  </question>
+  <question type="multichoice">
+    <name><text>Reactivo 6 [Alto - Aplicación] - Unidad 5: Estrategia del transporte — Tema 6.1: Valorización de v</text></name>
+    <questiontext format="html"><text><![CDATA[<div class="espoch-reactivo"><p><em>Selección Múltiple — Lea detenidamente el enunciado y seleccione la alternativa correcta entre las cuatro opciones disponibles.</em></p><p>En un estudio de valorización de vías y rutas para el transporte público interparroquial mediante Sistemas Inteligentes de Transporte (ITS), un corredor vial de 24 km presenta actualmente una velocidad comercial media de 18 km/h durante la hora pico debido a intersecciones no semaforizadas y paradas informales. Tras implementar priorización semafórica, segregación parcial de carril y paradas fijas cada 800 m, el tiempo total de viaje por sentido se reduce en 20 minutos. ¿Cuál es la nueva velocidad comercial media del corredor y en qué porcentaje aumentó la productividad horaria (viajes por hora) de cada unidad si el tiempo de terminal entre despachos se mantiene en 10 minutos?</p></div>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p><strong>Respuesta correcta:</strong> b) Nueva velocidad comercial de 24 km/h y un incremento del 28,57% en la productividad horaria de cada unidad.</p><p><strong>Justificación:</strong> Cálculo de ingeniería de transporte (Narayanaswami, 2023): Tiempo inicial T1 = (24 km / 18 km/h) × 60 = 80 min. Con reducción de 20 min, T2 = 60 min (1,0 h) -&gt; Nueva velocidad V2 = 24 km / 1 h = 24 km/h. Con 10 min de terminal, el ciclo operativo pasa de 90 min a 70 min; el incremento de productividad es ((90/70) - 1) × 100 = 28,57%.</p><p><strong>Resultado de Aprendizaje:</strong> RAC6: Aplicar el razonamiento lógico, verbal, numérico y abstracto para enfrentar con éxito los retos que se le presenten en su ejercicio profesional. | RA Unidad 5: Conoce con precisión las estrategias del transporte que se presentan en el país mediante el análisis de la infraestructura y los servicios para optimizar tiempo y recursos.</p><p><strong>Bibliografía:</strong> Narayanaswami, Sundaravalli. (2023). Intelligent Transportation Systems: Concepts and Cases. Recuperado de: https://elibro.net/es/lc/espoch/titulos/227029</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber>ESPOCH_TR_6_ALTO</idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Nueva velocidad comercial de 30 km/h y un incremento del 40,00% en la productividad horaria de cada unidad.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Opción incorrecta.</p>]]></text></feedback>
+    </answer>    <answer fraction="100" format="html">
+      <text><![CDATA[<p>Nueva velocidad comercial de 24 km/h y un incremento del 28,57% en la productividad horaria de cada unidad.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>¡Correcto! Cálculo de ingeniería de transporte (Narayanaswami, 2023): Tiempo inicial T1 = (24 km / 18 km/h) × 60 = 80 min. Con reducción de 20 min, T2 = 60 min (1,0 h) -&gt; Nueva velocidad V2 = 24 km / 1 h = 24 km/h. Con 10 min de terminal, el ciclo operativo pasa de 90 min a 70 min; el incremento de productividad es ((90/70) - 1) × 100 = 28,57%.</p>]]></text></feedback>
+    </answer>    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Nueva velocidad comercial de 24 km/h y un incremento del 25,00% en la productividad horaria de cada unidad.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Opción incorrecta.</p>]]></text></feedback>
+    </answer>    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Nueva velocidad comercial de 28 km/h y un incremento del 33,33% en la productividad horaria de cada unidad.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Opción incorrecta.</p>]]></text></feedback>
+    </answer>    <tags>
+      <tag><text>Dificultad:Alto</text></tag>
+      <tag><text>Taxonomia:Aplicación</text></tag>
+    </tags>
+  </question>
+</quiz>
